@@ -28,6 +28,7 @@
           <th>Endpoint</th>
           <th>Method</th>
           <th>Created At</th>
+          <th>Is Enabled</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -37,6 +38,7 @@
           <td>{{ target.endpoint }}</td>
           <td>{{ target.method }}</td>
           <td>{{ new Date(target.createdAt).toLocaleString() }}</td>
+          <td>{{ target.enabled }}</td>
           <td>
             <router-link
               :to="{
