@@ -2,7 +2,7 @@
   <div id="check-results">
     <h1>Check Results for</h1>
     <h2>Target {{ targetId }}</h2>
-    <h2>Endpoint {{ endpoint }}</h2>
+    <h2>Method {{ method }} {{ endpoint }}</h2>
     <router-link to="/">Back to Targets</router-link>
     <div v-if="loading">Loading check results...</div>
     <div v-else-if="error" class="error">{{ error }}</div>
@@ -43,6 +43,10 @@ export default {
   name: 'CheckResultsView',
   props: {
     targetId: {
+      type: String,
+      required: true,
+    },
+    method: {
       type: String,
       required: true,
     },

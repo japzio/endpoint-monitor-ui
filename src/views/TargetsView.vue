@@ -41,7 +41,7 @@
             <router-link
               :to="{
                 name: 'CheckResults',
-                params: { targetId: target.id, endpoint: target.endpoint },
+                params: { targetId: target.id, method: target.method ,endpoint: target.endpoint },
               }"
             >
               View Check Results
