@@ -12,6 +12,7 @@
           <th>Check ID</th>
           <th>Status</th>
           <th>Checked At</th>
+          <th>Duration(ms)</th>
           <th>Description</th>
         </tr>
       </thead>
@@ -31,6 +32,7 @@
             {{ result.status || 'Unknown' }}
           </td>
           <td>{{ new Date(result.createAt).toLocaleString() }}</td>
+          <td>{{ result.duration }}</td>
           <td>{{ result.description }}</td>
         </tr>
       </tbody>
