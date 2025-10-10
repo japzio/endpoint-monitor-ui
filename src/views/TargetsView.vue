@@ -28,7 +28,6 @@
           <th>Endpoint</th>
           <th>Method</th>
           <th>Created At</th>
-          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -37,16 +36,6 @@
           <td>{{ target.endpoint }}</td>
           <td>{{ target.method }}</td>
           <td>{{ new Date(target.createdAt).toLocaleString() }}</td>
-          <td>
-            <router-link
-              :to="{
-                name: 'CheckResults',
-                params: { targetId: target.id, method: target.method ,endpoint: target.endpoint },
-              }"
-            >
-              View Check Results
-            </router-link>
-          </td>
         </tr>
       </tbody>
     </table>
